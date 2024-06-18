@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+}
+header{
+    background: #000;
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    text-transform: uppercase;
+}
+.bx-cart{
+  cursor: pointer;
+}
+.title_movie{
+    font-size: 1rem;
+}
+#container_movies{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+#container_movies div{
+    width: 250px;
+}
+#container_movies div img{
+    width: 100%;
+    cursor: pointer;
+}
+.btn_movies{
+    background: black;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 50%;
+
+    border: none;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: .5rem;
+    transition: .5s;
+}
+.btn_movies:hover{
+    box-shadow: 0px 2px 12px 0px rgba(26, 26, 26, 0.75);
+    transform: scale(1.1);
+}
+.overview {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Número de líneas que deseas mostrar antes de cortar */
+    overflow: hidden;
+    line-height: 1.2;
+  }
+.content_movie{
+    position: relative;
+}
+.content_movie h1{
+    font-size: .5rem;
+    position: absolute;
+    top: 0px;
+    background: #000;
+    color: white;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+.content_movie:hover h1{
+    opacity: 1;
+}
+
+
+/* ==============================
+            MODAL
+=================================
+*/
+
+/* Estilos para la card */
+.card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+  }
+  
+  /* Estilos para el modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /*=====================
+    ESTILOS MODAL CART
+  ========================*/
+  .modal_cart {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden; /* Evita que el modal entero tenga scroll */
+  }
+  
+  .modal-content-cart {
+    background-color: white;
+    margin: 10% auto; /* Ajusta para centrar mejor el modal */
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-height: 80%; /* Limita la altura máxima del contenido del modal */
+    overflow-y: auto; /* Habilita el scroll vertical si el contenido excede la altura máxima */
+  }
+  
+  .close_cart {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close_cart:hover,
+  .close_cart:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  /*=====================
+    ESTILOS DETAIL CARDS
+  ========================*/
+
+  #container_detail{
+    display: flex;
+    gap: 2rem;
+  }
+  #container_detail h1{
+    font-size: 1.2rem;
+    line-height: 3;
+  }
+  #container_detail img{
+    width: 200px;
+  }
+  .detail_overview{
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .detail_price{
+    font-weight: bold;
+  }
+  .detail_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+#container_view-cart{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.card_cart{
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  height: auto;
+}
+.card_cart img{
+  width: 100px;
+  height: 100px;
+}
+.content_items{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card_cart h1{
+  font-size: .7rem;
+}
+
+
+@media( width < 800px){
+  #container_detail{
+    flex-direction: column;
+    align-items: center;
+  }
+  #container_detail img{
+    width: 80%;
+  }
+  .modal-content {
+    width: 80%;
+    height: auto;
+    margin: 20% auto;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <header>
+        <h2>movies</h2>
+
+        <div>
+            <i class='bx bx-cart' id="container_cart"></i>
+            <span id="cart_movie">0</span>
+        </div>
+        
+    </header>
+
+    <main>
+        <h1>Destacados</h1>
+        <div id="container_movies"></div>
+    </main>
+
+
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div id="container_detail"></div>
+        </div>
+    </div>
+
+    <div id="modal_cart" class="modal_cart">
+        <div class="modal-content-cart">
+          <span class="close_cart">&times;</span>
+          <div id="container_view-cart"></div>
+        </div>
+    </div>
+
+
+    <script src="data/data.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/modalCart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
